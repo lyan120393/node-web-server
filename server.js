@@ -66,6 +66,13 @@ app.get('/help', (req, res) =>{
         headerName : 'This is help page',
         paragraphContent : 'The paragraph is about help page'
     })
+});
+app.get('/readme', (req, res) => {
+    res.render('readme.hbs', {
+        titleName : 'Read Me',
+        headerName : 'This is Read Me Page',
+        paragraphContent : 'This is a simple nodejs server project with express.js'
+    })
 })
 
 //使用监听端口,去对所有来访的访问者进行侦测. 本地浏览器打开的地址就是 localhost:3000; 
